@@ -18,7 +18,7 @@
 
 
     --Main
-    MainSection:NewToggle("Fruit Esp", "for afk need to be op", function(v)
+    MainSection:NewToggle("Fruit  Esp", "for afk need to be op", function(v)
         getgenv().autospin = v
         while wait() do
             if not getgenv().autospin then return end
