@@ -1,11 +1,8 @@
-    --Open Source Lmao
-    --Made By Maxey
-    
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib(" GPO Fruit Esp ", "DarkTheme")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib(" Signed By Maxey", "GrapeTheme")
+----------------------------------------------------------------
 
-
-    --main
+    --Player
     local Main = Window:NewTab("Player")
     local PlayerSection = Main:NewSection("Player")
 
@@ -20,13 +17,33 @@
     end)
 
 
-    --Main
-    MainSection:NewToggle("Fruit  Esp", "for afk need to be op", function(v)
-        getgenv().autospin = v
-        while wait() do
-            if not getgenv().autospin then return 
-                for a,b in pairs(game:GetService("Workspace"):GetDescendants())do if b.Name=="preHandle"then local c=Instance.new("BillboardGui",b)c.Name="ElectricPPPGUI"c.Size=UDim2.new(50,0,50,0)c.AlwaysOnTop=true;local d=Instance.new("Frame",c)d.Size=UDim2.new(1,0,1,0)d.BackgroundTransparency=0.80;d.BorderSizePixel=0;d.BackgroundColor3=Color3.fromRGB(255,125,38)local e=Instance.new('TextLabel',d)e.Size=UDim2.new(2,0,2,0)e.BorderSizePixel=0;e.TextSize=20;e.Text="Fruit"e.BackgroundTransparency=1;e.TextColor=Color3.fromRGB(255,255,255)end end
-            end
+MainSection:NewToggle("Fruit Esp", "this is open source", function(v)
+    print("On") --Checks to see if the Toggling works
+    getgenv().autospin = v
+        while true do
+            wait()
+        if not getgenv().autospin then return end
+        print("Running Loops") --checks if the loop above is working properly
+    for __,v in pairs(game:GetService("Workspace"):GetDescendants()) do -- the path
+    if v.Name == "preHandle" then -- the item
+        print(v) --test too see what it prints
+      local a = Instance.new("BillboardGui",v) -- pretty much explains everything
+      a.Name = "ElectricPPPGUI"
+      a.Size = UDim2.new(50,0, 50,0)
+      a.AlwaysOnTop = true
+      local b = Instance.new("Frame",a)
+      b.Size = UDim2.new(1,0, 1,0)
+      b.BackgroundTransparency = 0.80
+      b.BorderSizePixel = 0
+      b.BackgroundColor3 = Color3.fromRGB(255, 125, 38)
+      local c = Instance.new('TextLabel',b)
+      c.Size = UDim2.new(2,0,2,0)
+      c.BorderSizePixel = 0
+      c.TextSize = 20
+      c.Text = "Fruit" --this legit did nothing lol
+      c.BackgroundTransparency = 1
+      c.TextColor = Color3.fromRGB(255, 255, 255)
+    end
+    end
          end
-    end)
-
+end)
