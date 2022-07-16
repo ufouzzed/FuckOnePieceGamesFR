@@ -1,22 +1,27 @@
+--Signed By JMaxey and Maxey#6548
+--Open Source
+
+
+----------------------------------------------------------------
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib(" Signed By Maxey", "GrapeTheme")
 ----------------------------------------------------------------
 
-    --Player
+    --Player--
     local Main = Window:NewTab("Player")
     local PlayerSection = Main:NewSection("Player")
 
-    --main
+    --main--
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
 
 
-    --Player
+    --Player--
     PlayerSection:NewSlider("WalkSpeed", "Makes you walk faster ig", 500, 16, function(v) -- 500 (MaxValue) | 0 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
     end)
 
-
+--main--
 MainSection:NewToggle("Fruit Esp", "this is open source", function(v)
     print("On") --Checks to see if the Toggling works
     getgenv().autospin = v
@@ -43,7 +48,7 @@ MainSection:NewToggle("Fruit Esp", "this is open source", function(v)
       c.Text = "Fruit" --this legit did nothing lol
       c.BackgroundTransparency = 1
       c.TextColor = Color3.fromRGB(255, 255, 255)
+            end
+        end
     end
-    end
-         end
 end)
