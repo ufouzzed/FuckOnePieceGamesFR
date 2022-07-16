@@ -1,0 +1,28 @@
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib(" GPO Fruit Esp ", "DarkTheme")
+
+
+    --main
+    local Main = Window:NewTab("Player")
+    local PlayerSection = Main:NewSection("Player")
+
+    --main
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+    --Player
+    PlayerSection:NewSlider("WalkSpeed", "Makes you walk faster ig", 500, 16, function(v) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+
+    --Main
+    MainSection:NewToggle("Auto Punch", "for afk need to be op", function(v)
+        getgenv().autospin = v
+        while wait() do
+            if not getgenv().autospin then return end
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ufouzzed/TestForGPO/main/Test"))()
+        end
+    end)
+
